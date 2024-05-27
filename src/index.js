@@ -1,1 +1,3 @@
-console.log('test');
+import loadMainContent from './page-load.js';
+
+document.body.appendChild(loadMainContent());
