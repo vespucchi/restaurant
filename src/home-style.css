@@ -1,0 +1,8 @@
+main.home {
+    height: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 20px;
+}

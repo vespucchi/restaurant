@@ -1,0 +1,13 @@
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 50px;
+}
+
+header {
+    height: 15vh;
+}
+

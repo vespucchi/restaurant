@@ -1,0 +1,23 @@
+main.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.menu {
+    width: 33vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    background-color: grey;
+    padding: 40px 40px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+}
+
