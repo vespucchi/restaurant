@@ -28,7 +28,7 @@ section.menu {
 }
 
 .left {
-    background-color: var(--dyke-color);
+    background-color: var(--khaki-color);
     border-right: 1px var(--white-color) solid;
     display: flex;
     flex-direction: column;

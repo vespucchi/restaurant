@@ -1,9 +1,58 @@
 main.home {
     height: 75vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
+.left-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+h1 {
+    font-size: 5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--white-color) 0%, var(--khaki-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 0.5;
+    letter-spacing: 5px;
+}
+
+button#order {
+    margin-top: auto;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, var(--licor-color) 0%, var(--khaki-color) 51%, var(--coffee-color) 100%);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--white-color);
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, .25) 0px 14px 28px, rgba(0, 0, 0, .22) 0px 5px 5px;
+}
+
+button#order:hover {
+    transform: scale(1.05);
+    background-position: right center;
+}
+
+.right-home {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 150px;
+    height: 100%;
+}
+
+img#mug {
+    width: 672px;
+    height: 406px;
+}

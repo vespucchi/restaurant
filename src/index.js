@@ -5,7 +5,7 @@ import loadMenuContent from './menu-load.js';
 
 const body = document.querySelector('body');
 
-body.appendChild(loadMenuContent());
+body.appendChild(loadMainContent());
 
 const navItems = document.querySelectorAll('.nav-item');
 const main = document.querySelector('main');
