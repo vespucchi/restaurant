@@ -9,6 +9,7 @@ export default function loadMainContent() {
     const btn = document.createElement('button');
     const left = document.createElement('div');
     const right = document.createElement('div');
+    const smoke = document.createElement('div');
     const image = document.createElement('img');
 
 
@@ -19,6 +20,7 @@ export default function loadMainContent() {
     left.classList.add('left-home');
     right.classList.add('right-home');
     btn.setAttribute('id', 'order');
+    smoke.classList.add('smoke');
     image.setAttribute('id', 'mug');
 
     h1.textContent = 'Brewed to perfection.';
@@ -29,7 +31,7 @@ export default function loadMainContent() {
     header.append(h1, h2);
     button.appendChild(btn);
     left.append(header, button);
-    right.append(image);
+    right.append(smoke, image);
     main.append(left, right);
 
     return main; 
