@@ -1,11 +1,17 @@
 import './menu-style.css';
 
 export default function loadMenuContent() {
+    const body = document.querySelector('body');
     const main = document.querySelector('main');
     const section = document.createElement('section');
+    const left = document.createElement('div');
+    const right = document.createElement('div');
 
+    body.classList.add('menu');
     main.classList.add('menu');
     section.classList.add('menu');
+    left.classList.add('left');
+    right.classList.add('right');
 
     const titleArray = [
         'Mocha',
@@ -24,35 +30,29 @@ export default function loadMenuContent() {
     ]
     
     for(let i = 0; i < 4; i++) {
-        const div1 = document.createElement('div');
-        const image = document.createElement('image');
-
-        div1.classList.add('first-col');
-        div1.append(image);
-
-        const div2 = document.createElement('div');
-        const titleBox = document.createElement('div');
+        const infoDiv = document.createElement('div');
+        const titleDiv = document.createElement('div');
         const title = document.createElement('h3');
         const price = document.createElement('h3');
-        const descBox = document.createElement('div');
         const desc = document.createElement('p');
+        const image = document.createElement('img');
 
-        div2.classList.add('second-col');
+        infoDiv.classList.add('coffee-info');
+        titleDiv.classList.add('coffee-title');
+        image.classList.add('mugs');
 
-        titleBox.classList.add('title-box');
         title.textContent = titleArray[i];
         price.textContent = priceArray[i];
-        titleBox.append(title, price);
-
-        descBox.classList.add('desc-box');
         desc.textContent = descArray[i];
-        descBox.append(desc);
+        image.src = `../src/coffe-mugs (${i + 1}).png`;
 
-        div2.append(titleBox, descBox);
-        section.append(div1, div2);
+        titleDiv.append(title, price);
+        infoDiv.append(titleDiv, desc);
+        right.append(infoDiv);
+        left.append(image);
+        section.append(left, right);
         main.append(section);
     }
-
 
     return main;
 }

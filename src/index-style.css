@@ -1,4 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Sundaycoffee';
+    src: url('./Sundaycoffee.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Quesha';
+    src: url('./Quesha.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto.ttf') format(truetype);
+}
+
+:root {
+    color: var(--white-color);
+    font-family: 'Roboto';
+    font-size: 16px;
+    
+    /* HSL colors pallete */
+    --ash-color: hsla(68, 8%, 62%, 0.8);
+    --licor-color: hsla(23, 16%, 10%, 1);
+    --coffee-color: hsla(25, 38%, 36%, 1);
+    --khaki-color: hsla(39, 31%, 64%, 1);
+    --dyke-color: hsla(27, 22%, 20%, 1);
+    --white-color: #FFFFFF;
+
+    --border-radius: 30px;
+}
+
 body {
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     box-sizing: border-box;
     height: 100vh;
     display: flex;
@@ -11,3 +50,7 @@ header {
     height: 15vh;
 }
 
+h3 {
+    font-family: 'Quesha';
+    font-size: 2rem;
+}
