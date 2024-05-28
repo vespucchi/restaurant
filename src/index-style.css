@@ -22,13 +22,13 @@
     color: var(--white-color);
     font-family: 'Roboto';
     font-size: 16px;
-    
+
     /* HSL colors pallete */
-    --ash-color: hsla(68, 8%, 62%, 0.8);
+    --ash-color: hsla(68, 8%, 62%, 1);
     --licor-color: hsla(23, 16%, 10%, 1);
     --coffee-color: hsla(25, 38%, 36%, 1);
     --khaki-color: hsla(39, 31%, 64%, 1);
-    --dyke-color: hsla(27, 22%, 20%, 1);
+    --dyke-color: hsla(27, 22%, 20%, 0.5);
     --white-color: #FFFFFF;
 
     --border-radius: 30px;
@@ -36,6 +36,8 @@
 
 body {
     background-image: url('./background.jpg');
+    background-color: var(--dyke-color);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -43,7 +45,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 40px 50px;
 }
 
 header {
@@ -53,4 +54,66 @@ header {
 h3 {
     font-family: 'Quesha';
     font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 25px 50px 0 50px;
+}
+
+nav .items {
+    display: flex;
+    gap: 25px;
+}
+
+main {
+    padding: 40px 50px;
+}
+
+button {
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button.nav-item {
+    font-size: 1.5rem;
+}
+
+span.home {
+    --offset: 2;
+    color: #ffcc00;
+    left: calc(var(--offset) * 1ch + calc(var(--offset) * 0.2ch));
+    animation: flicker 3s linear infinite;
+    top: 0;
+    z-index: 1;
+
+    font-size: 5rem;
+    line-height: 1;
+}
+
+@keyframes flicker {
+
+    0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, 100% {
+        opacity: 0.99;
+        text-shadow:
+            -1px -1px 0 rgba(255, 255, 255, 0.4),
+            1px -1px 0 rgba(255, 255, 255, 0.4),
+            -1px 1px 0 rgba(255, 255, 255, 0.4),
+            1px 1px 0 rgba(255, 255, 255, 0.4),
+            0 -2px 8px,
+            0 0 2px,
+            0 0 5px #ff7e00,
+            0 0 15px #ff4444,
+            0 0 2px #ff7e00,
+            0 2px 3px #000;
+    }
+
+    20%, 21.9%, 63%, 63.9%, 65%, 69.9% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
 }

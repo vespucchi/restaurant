@@ -17,18 +17,6 @@ section.menu {
     animation: .3s ease-out 0s 1 moveup;
 }
 
-@keyframes moveup {
-    0% {
-        transform: translateY(10%) scale(0.9);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-}
-
 .title-box {
     display: flex;
     justify-content: space-between;
@@ -70,3 +58,17 @@ img.mugs {
     max-width: 100%;
 }
 
+
+
+
+@keyframes moveup {
+    0% {
+        transform: translateY(10%) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
