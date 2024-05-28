@@ -26,7 +26,7 @@ export default function loadMainContent() {
     h1.textContent = 'Brewed to perfection.';
     h2.textContent = 'Every time.';
     btn.textContent = 'Order now';
-    image.src = '../src/mug.png';
+    image.src = '../src/home/mug.png';
 
     header.append(h1, h2);
     button.appendChild(btn);

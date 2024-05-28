@@ -1,7 +1,9 @@
 import 'normalize.css';
 import './index-style.css';
-import loadMainContent from './home-load.js';
-import loadMenuContent from './menu-load.js';
+import loadMainContent from '../home/home-load.js';
+import loadMenuContent from '../menu/menu-load.js';
+import loadContactContent from '../contact/contact-load.js';
+
 
 const body = document.querySelector('body');
 
@@ -22,6 +24,11 @@ navItems.forEach(item => {
         else if (item.dataset.index === '2') {
             main.classList.add('menu');
             body.append(loadMenuContent());
+        }
+        else if (item.dataset.index === '4') {
+            main.classList.add('contact');
+            body.append(loadContactContent());
         };
+
     })
 })

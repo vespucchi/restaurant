@@ -1,17 +1,15 @@
 import './menu-style.css';
 
 export default function loadMenuContent() {
-    const body = document.querySelector('body');
     const main = document.querySelector('main');
     const section = document.createElement('section');
     const left = document.createElement('div');
     const right = document.createElement('div');
 
-    body.classList.add('menu');
     main.classList.add('menu');
     section.classList.add('menu');
-    left.classList.add('left');
-    right.classList.add('right');
+    left.classList.add('left-menu');
+    right.classList.add('right-menu');
 
     const titleArray = [
         'Mocha',
@@ -44,15 +42,16 @@ export default function loadMenuContent() {
         title.textContent = titleArray[i];
         price.textContent = priceArray[i];
         desc.textContent = descArray[i];
-        image.src = `../src/coffe-mugs (${i + 1}).png`;
+        image.src = `../src/menu/coffe-mugs (${i + 1}).png`;
 
         titleDiv.append(title, price);
         infoDiv.append(titleDiv, desc);
         right.append(infoDiv);
         left.append(image);
         section.append(left, right);
-        main.append(section);
     }
+
+    main.append(section);
 
     return main;
 }

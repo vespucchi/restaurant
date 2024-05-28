@@ -5,17 +5,17 @@
 
 @font-face {
     font-family: 'Sundaycoffee';
-    src: url('./Sundaycoffee.ttf') format(truetype);
+    src: url('../fonts/Sundaycoffee.ttf') format(truetype);
 }
 
 @font-face {
     font-family: 'Quesha';
-    src: url('./Quesha.ttf') format(truetype);
+    src: url('../fonts/Quesha.ttf') format(truetype);
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('./Roboto.ttf') format(truetype);
+    src: url('../fonts/Roboto.ttf') format(truetype);
 }
 
 :root {
