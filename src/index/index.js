@@ -8,7 +8,7 @@ import loadAboutContent from '../about/about-load.js';
 
 const body = document.querySelector('body');
 
-body.appendChild(loadContactContent());
+body.appendChild(loadMainContent());
 
 const navItems = document.querySelectorAll('.nav-item');
 const main = document.querySelector('main');
