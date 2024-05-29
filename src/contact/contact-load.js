@@ -13,6 +13,7 @@ export default function loadContactContent() {
 
     const hq = document.createElement('div');
     hq.classList.add('info-contact');
+    hq.classList.add('hq');
     const h5_1 = document.createElement('h5');
     const p_1 = document.createElement('p');
     h5_1.textContent = 'headquarters';
@@ -21,6 +22,7 @@ export default function loadContactContent() {
 
     const sp = document.createElement('div');
     sp.classList.add('info-contact');
+    sp.classList.add('sp');
     const h5_2 = document.createElement('h5');
     const p_2 = document.createElement('p');
     h5_2.textContent = 'support';
@@ -28,6 +30,8 @@ export default function loadContactContent() {
     sp.append(h5_2, p_2);
 
     const icons = document.createElement('div');
+    const ico = document.createElement('div');
+    ico.classList.add('social-icons');
     icons.classList.add('social-contact');
 
     const a1 = document.createElement('a');
@@ -47,8 +51,9 @@ export default function loadContactContent() {
     icn2.height = '26';
 
     a2.appendChild(icn2);
-    icons.append(a1, a2);
-
+    ico.appendChild(a1);
+    ico.appendChild(a2);
+    icons.append(ico);
     left.append(hq, sp, icons);
 
     // right side

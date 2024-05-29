@@ -26,6 +26,7 @@
     /* HSL colors pallete */
     --ash-color: hsla(68, 8%, 62%, 1);
     --licor-color: hsla(23, 16%, 10%, 1);
+    --licor-color-trans: hsla(23, 16%, 10%, 0.9);
     --coffee-color: hsla(25, 38%, 36%, 1);
     --khaki-color: hsla(39, 31%, 64%, 1);
     --dyke-color: hsla(27, 22%, 20%, 0.5);
@@ -41,6 +42,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -60,17 +62,39 @@ h3 {
 nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 100px;
     padding: 25px 50px 0 50px;
 }
 
-nav .items {
+.logo {
+    order: 0;
+}
+
+.navbar {
+    order: 1;
+}
+
+button.burger-button {
+    background-color: transparent;
+    border: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 32px;
+    float: left;
+    line-height: 70px;
+    display: none;
+    outline: none;
+}
+
+nav ul#items {
     display: flex;
     gap: 25px;
 }
 
-main {
-    padding: 0px 50px 0px 50px;
+li {
+    list-style-type: none;
 }
 
 button {
@@ -83,6 +107,11 @@ button {
 button.nav-item {
     font-size: 1.5rem;
 }
+
+li.close {
+    display: none;
+}
+
 
 span.home {
     --offset: 2;
@@ -120,5 +149,80 @@ a {
     20%, 21.9%, 63%, 63.9%, 65%, 69.9% {
         opacity: 0.4;
         text-shadow: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+    :root {
+        color: var(--white-color);
+        font-family: 'Roboto';
+        font-size: 8px;
+    }
+
+    header {
+        height: 10vh;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: normal;
+        padding: 0;
+        padding-top: 20px;
+        padding-right: 20px;
+        gap: 0;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1;
+        overflow-x: hidden;
+        order: 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-left: auto;
+        order: 1;
+    }
+
+    nav ul#items {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--licor-color-trans);
+        height: 100%;
+    }
+
+    nav ul#items.show {
+        display: flex;
+    }
+    
+    button.nav-item {
+        font-size: 3rem;
+        padding-left: 20px;
+    }
+
+    button.burger-button {
+        display: block;
+        align-self: flex-start;
+    }
+
+    li.close {
+        display: flex;
+        align-self: flex-end;
+        padding-top: 20px;
+        padding-right: 20px;
+        font-size: 3.5rem;
+    }
+
+    button.hidden {
+        display: none;
     }
 }

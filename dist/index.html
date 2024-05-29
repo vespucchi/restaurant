@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../src/index/favicon.ico">
     <title>café.</title>
-<script defer src="runtime.a9052eb1377cd740f51a.js"></script><script defer src="vendors.47d2fe49c3546df7f0fa.js"></script><script defer src="index.98b434d5e6802dd70844.js"></script></head>
+<script defer src="runtime.a9052eb1377cd740f51a.js"></script><script defer src="vendors.47d2fe49c3546df7f0fa.js"></script><script defer src="index.d972de4ac9d90679409b.js"></script></head>
 
 <body>
     <header>
         <nav>
+            <div class="navbar">
+                <button class="burger-button">
+                    <img src="../src/index/menu-icon.svg" alt="Hamburger menu icon" id="hamburger">
+                </button>
+                <ul id="items">
+                    <li class="close"><button class="close-btn hidden">X</button></li>
+                    <li><button class="nav-item menu" data-index="2">MENU</button></li>
+                    <li><button class="nav-item about" data-index="3">ABOUT</button></li>
+                    <li><button class="nav-item about" data-index="4">CONTACT</button></li>
+                </ul>
+            </div>
+            
             <div class="logo">
                 <button class="nav-item home" data-index="1"><span class="nav-item home text" aria-hidden="true">café.</span></button>
-            </div>
-            <div class="items">
-                <button class="nav-item menu" data-index="2">MENU</button>
-                <button class="nav-item about" data-index="3">ABOUT</button>
-                <button class="nav-item about" data-index="4">CONTACT</button>
             </div>
         </nav>
     </header>

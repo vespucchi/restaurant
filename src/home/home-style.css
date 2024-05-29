@@ -55,7 +55,6 @@ button#order:hover {
 
 img#mug {
     width: 672px;
-    height: 406px;
     animation: growslide .5s;
 }
 
@@ -79,5 +78,43 @@ img#mug {
 
     100% {
         transform: scale(1) translateX(0);
+    }
+}
+
+
+@media (max-width: 600px) {
+    main.home {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 20px;
+    }
+
+    .left-home {
+        height: 100%;
+    }
+
+    button#order {
+        margin-top: auto;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 7rem;
+        letter-spacing: 2px;
+        background: linear-gradient(to right, var(--white-color) 0%, var(--khaki-color) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 0.5;
+        letter-spacing: 5px;
+        text-align: end;
+    }
+
+    .right-home {
+        display: none;
     }
 }

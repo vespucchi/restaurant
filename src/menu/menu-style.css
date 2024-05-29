@@ -72,3 +72,35 @@ img.mugs {
         opacity: 1;
     }
 }
+
+
+@media (max-width: 600px) {
+    main.menu {
+        width: 100vw;
+        padding: 10px 20px 10px 20px;
+        box-sizing: border-box;
+    }
+
+    section.menu {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .left-menu {
+        padding: 5px 5px;
+        gap: 35px;
+    }
+
+    .right-menu {
+        padding: 5px 15px;
+        gap: 20px;
+    }
+
+    h3 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+}

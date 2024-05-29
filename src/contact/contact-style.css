@@ -95,6 +95,10 @@ button.submit-form:hover {
 .social-contact {
     display: flex;
     justify-content: center;
+}
+
+.social-icons {
+    display: flex;
     gap: 20px;
 }
 
@@ -119,5 +123,88 @@ button.submit-form:hover {
     100% {
         transform: translateX(0) scale(1);
         opacity: 1;
+    }
+}
+
+
+@media (max-width: 600px) {
+    main.contact {
+        width: 100vw;
+        height: 100%;
+        padding: 0 20px 20px 20px;
+        box-sizing: border-box;
+    }
+
+    section.contact {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .left-contact {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 25%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "info1 social"
+            "info2 social";
+        gap: 10px;
+    }
+
+    .hq {
+        order: 0;
+        grid-area: info1;
+    }
+
+    .social-contact {
+        order: 1;
+        grid-area: social;
+        align-self: center;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .sp {
+        order: 2;
+        grid-area: info2;
+    }
+
+    .left-contact h5 {
+        font-size: 3rem;
+        overflow: scroll;
+    }
+
+    .right-contact {
+        height: 60vh;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 5px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        overflow: scroll
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form input, form textarea, form label {
+        font-size: 3rem;
+    }
+
+    form textarea {
+        height: 100px;
+    }
+
+    button.submit-form {
+        margin-top: 5px;
+        font-size: 3rem;
     }
 }
