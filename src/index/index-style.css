@@ -154,6 +154,10 @@ a {
 
 
 @media (max-width: 600px) {
+    * {
+        overflow-y: scroll;
+    }
+
     :root {
         color: var(--white-color);
         font-family: 'Roboto';

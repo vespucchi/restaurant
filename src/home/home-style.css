@@ -3,6 +3,7 @@ main.home {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    margin-left: 30px;
 }
 
 .left-home {
