@@ -70,7 +70,7 @@ nav .items {
 }
 
 main {
-    padding: 0px 50px;
+    padding: 0px 50px 0px 50px;
 }
 
 button {
@@ -94,6 +94,10 @@ span.home {
 
     font-size: 5rem;
     line-height: 1;
+}
+
+a {
+    cursor: pointer;
 }
 
 @keyframes flicker {

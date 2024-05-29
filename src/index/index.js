@@ -7,7 +7,7 @@ import loadContactContent from '../contact/contact-load.js';
 
 const body = document.querySelector('body');
 
-body.appendChild(loadMainContent());
+body.appendChild(loadContactContent());
 
 const navItems = document.querySelectorAll('.nav-item');
 const main = document.querySelector('main');

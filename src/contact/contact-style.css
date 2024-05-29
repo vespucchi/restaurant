@@ -1,0 +1,123 @@
+main.contact {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+section.contact {
+    width: 30%;
+    height: 65%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 40px;
+    animation: .3s ease-out 0s 1 moveup;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left-contact, .right-contact {
+    border-radius: inherit;
+    backdrop-filter: blur(40px) brightness(1.15);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    border: 2px solid var(--white-color)
+}
+
+.left-contact {
+    width: 40%;
+    animation: 0.3s ease-in 0s 1 leftslide;
+}
+
+.right-contact {
+    width: 60%;
+    animation: 0.3s ease-in 0s 1 rightslide;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.name-div, .email-div, .comment-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+input {
+    background-color: var(--white-color);
+    color: var(--coffee-color);
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--coffee-color);
+}
+
+textarea {
+    color: var(--coffee-color);
+    height: 75px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+button.submit-form {
+    align-self: center;
+    width: fit-content;
+    background-color: var(--khaki-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    box-shadow: rgba(0, 0, 0, .25) 0px 14px 28px, rgba(0, 0, 0, .22) 0px 5px 5px;
+    transition: 0.5s;
+}
+
+button.submit-form:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@keyframes leftslide {
+    0% {
+        transform: translateX(-15%) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rightslide {
+    0% {
+        transform: translateX(+15%) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
