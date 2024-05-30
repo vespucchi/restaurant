@@ -17,9 +17,7 @@ main.home {
 h1 {
     font-size: 5rem;
     letter-spacing: 2px;
-    background: linear-gradient(to right, var(--white-color) 0%, var(--khaki-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--white-color);
 }
 
 h2 {
